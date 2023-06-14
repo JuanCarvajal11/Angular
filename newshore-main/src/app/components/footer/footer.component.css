@@ -1,0 +1,19 @@
+footer {
+  min-height: 50px;
+  margin: -8px;
+  background-color: #191919;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  font-family: sans-serif;
+  padding-left: 8px;
+}
+
+footer p {
+  font-size: .8em;
+}
