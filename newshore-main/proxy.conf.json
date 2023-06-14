@@ -1,0 +1,15 @@
+{
+  "/api/*": {
+    "target": "https://recruiting-api.newshore.es",
+    "secure": true,
+    "logLevel": "debug",
+    "changeOrigin": true
+  },
+
+  "/currency_data/*": {
+    "target": "https://api.apilayer.com/",
+    "secure": true,
+    "logLevel": "debug",
+    "changeOrigin": true
+  }
+}

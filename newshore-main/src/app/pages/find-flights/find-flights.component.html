@@ -1,0 +1,39 @@
+<div class="container">
+
+  <div class="container-login">
+    <div class="container-img"></div>
+      <form method="post" class="container-form" (ngSubmit)="checkDataFlightForm()" #formFlights="ngForm">
+
+        <section>
+          <h2>
+            Buscar vuelo
+          </h2>
+        </section>
+
+        <section class="section-form-text _1">
+          <input type="text" name="origin" maxlength="3" [(ngModel)]="dataFlightForm.origin" class="inputs-form" autocomplete="none" require>
+          <label>Origien:</label>
+        </section>
+
+        <section class="section-form-text _2">
+          <input type="text" name="destination" maxlength="3" [(ngModel)]="dataFlightForm.destination" class="inputs-form" autocomplete="none" require>
+          <label>Destino:</label>
+        </section>
+
+        <section class="section-form-text _3">
+          <select name="currency" class="inputs-form" [(ngModel)]="dataFlightForm.currency" require>
+            <option value="{{item}}" *ngFor="let item of objectKeys(currency.currencies)">{{ item }}</option>
+          </select>
+          <label>Moneda:</label>
+        </section>
+
+        <section class="section-form-checkbox">
+          <input type="checkbox" name="weight" [(ngModel)]="dataFlightForm.weight">
+          <label>Obtener la ruta mas barata</label>
+        </section>
+
+        <input type="submit" value="Buscar">
+      </form>
+    </div>
+
+</div>
