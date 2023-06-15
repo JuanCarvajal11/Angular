@@ -1,0 +1,35 @@
+<div class="body">
+  <h1>Administración de articulos</h1>
+
+  <div class="table">
+    <table>
+      <tr>
+        <td>Codigo</td>
+        <td>Descripcion</td>
+        <td>Precio</td>
+        <td>Borrar</td>
+        <td>Seleccionar</td>
+      </tr>
+      <tr *ngFor="let producto of productos; index as i">
+        <td>{{ producto.codigo }}</td>
+        <td>{{ producto.descripcion }}</td>
+        <td>{{ producto.precio }}</td>
+        <td><button (click)="deletePrice(i)">Borrar?</button></td>
+        <td><Button (click)="seleccionar(producto.codigo, producto.descripcion, producto.precio)">Seleccionar</Button>
+      </tr>
+    </table>
+  </div>
+
+  <div class="form">
+    <label for="">Codigo: <input type="number" [(ngModel)]="art.codigo" /> <br></label>
+    <label>Descripción: <input type="text" [(ngModel)]="art.descripcion" /><br/></label>
+    <label>Precio: <input type="number" [(ngModel)]="art.precio" /><br/></label>
+    <button (click)="agregarProducto()">Agregar</button>
+    <button (click)="modificarProducto(art.codigo, art.descripcion,art.precio)">Modificar</button>
+  </div>
+
+  <div class="log">
+    <h2>Log</h2>
+    <p class="log-text">{{log}}</p>
+  </div>
+</div>

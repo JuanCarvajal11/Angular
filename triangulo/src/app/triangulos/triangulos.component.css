@@ -1,0 +1,22 @@
+.triangulo {
+  width: 0;
+  height: 0;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid;
+  border-left: 50px solid transparent;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px; /* Espacio entre triángulos */
+  position: relative;
+}
+
+.triangulo span {
+  color: rgb(0, 0, 0);
+  font-size: 26px;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-top: 70px;
+  transform: translate(-50%, -50%);
+}

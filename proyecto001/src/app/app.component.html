@@ -1,0 +1,28 @@
+<h1>{{title}}</h1>
+<h2>Los dos numeros son: {{num1}} , {{num2}}</h2>
+<p>Suma: {{num1 + num2}}</p>
+<p>Resta: {{num1 - num2}}</p>
+<p>Multiplicación: {{num1 * num2}}</p>
+<p>División: {{num1 / num2 }}</p>
+
+<h1>Utilizando Binding</h1>
+<label for="number1">Ingrese el numero 1: </label>
+<input type="number" name="number1" #number1 (keyup)="0"><br>
+<label for="number2">Ingrese el numero 2: </label>
+<input type="number" name="number2" #number2 (keyup)="0">
+<h2>Los dos numeros son: {{number1.value}} , {{number2.value}}</h2>
+
+<hr>
+<h1>Función OnClick</h1>
+<p>{{contador}}</p>
+<Button (click)="incrementar()">Aumentar</Button>
+<Button (click)="decrementar()">Decrementar</Button>
+<hr>
+<div>
+  <h1>NgModel</h1>
+  <p>Ingrese su nombre <input type="text" [(ngModel)]="nombre"></p>
+  <p>Ingrese su apellido <input type="text" [(ngModel)]="apellido"></p>
+  <p>Nombre Completo: {{nombre}} , {{apellido}}</p>
+</div>
+
+

@@ -1,0 +1,42 @@
+
+
+table {
+  border: 2px solid rgb(27, 76, 111);
+  margin-bottom: 10px;
+  color:rgb(0, 0, 0);
+  font-weight: bold;
+}
+th, td {
+  text-align: left;
+  vertical-align: top;
+  border: 2px solid rgb(27, 76, 111);
+  border-spacing: 0;
+}
+input {
+  margin-bottom: 10px;
+}
+
+
+h1{
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+button{
+  background-color: black;
+  color:white;
+  border-radius: 20px;
+}
+
+.form{
+  margin-top: 30px;
+}
+
+
+.log-text{
+  width: 400px;
+  background-color: black;
+  color: white;
+  align-items: center;
+  text-align: center;
+}
