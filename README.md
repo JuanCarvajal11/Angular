@@ -1,7 +1,6 @@
 # Angular
 Juan Manuel Carvajal Rincon / Grupo 69 UAM / Plataformas de Desarrollo4
 
-Newshore
 This project was generated with Angular CLI version 16.0.6
 
 Install dependencies
