@@ -1,0 +1,22 @@
+<div *ngIf="characters!=null; else espera" class="card-container">
+  <div class="card" *ngFor="let character of characters">
+    <img class="card-image" [src]="character.image" [alt]="character.name">
+    <div class="card-content">
+      <h1 class="card-title">{{ character.name }}</h1>
+      <p><strong>Status:</strong> {{ character.status }} </p>
+      <p><strong>Species:</strong> {{ character.species }}</p>
+      <p><strong>Gender:</strong> {{ character.gender }}</p>
+      <p><strong>Origin</strong>: {{character.origin.name}}<br>{{character.origin.url}}</p>
+      <p><strong>Location:</strong>  {{character.location.name}}<br>{{character.location.url}} </p>
+      <div><strong>Episodes:</strong><ul><li *ngFor="let episodes of character.episode"><a>{{episodes}}</a></ul></div>
+      <p><strong>Character URL:</strong>  {{character.url}}</p>
+      <p><strong>Created:</strong>  {{character.created}}</p>
+    </div>
+  </div>
+</div>
+
+<div class="navigation">
+  <button (click)="disminuir()" class="boton">&lt;</button>
+  <button  (click)="aumentar()" class="boton">&gt;</button>
+</div>
+<ng-template #espera>Esperando datos...</ng-template>
