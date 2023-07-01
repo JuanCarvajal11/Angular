@@ -1,0 +1,20 @@
+<div *ngIf="language != null; else espera" class="central">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let art of language">
+        <td>{{ art.name }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<ng-template #espera>
+  <div class="espera">Esperando datos...</div>
+</ng-template>
+<h1 class="volver">
+  <a routerLink="/"> <i class="fas fa-chevron-left"></i> Volver </a>
+</h1>
