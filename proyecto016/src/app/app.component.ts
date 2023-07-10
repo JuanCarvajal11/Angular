@@ -10,7 +10,7 @@ export class AppComponent implements OnInit {
   articulos: any;
 
   art = {
-    codigo: 0,
+    codigo:0,
     descripcion: '',
     precio: 0,
   };
@@ -24,13 +24,14 @@ export class AppComponent implements OnInit {
   recuperarTodos() {
     this.articulosServicio
       .recuperarTodos()
-      .subscribe((result: any) => (this.articulos = result));
+      .subscribe((result: any) => this.articulos = result);
   }
 
   alta() {
     this.articulosServicio.alta(this.art).subscribe((datos: any) => {
       if (datos['resultado'] == 'OK') {
         alert(datos['mensaje']);
+        console.log(this.art);
         this.recuperarTodos();
       }
     });

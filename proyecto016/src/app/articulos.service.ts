@@ -7,7 +7,7 @@ import { HttpClient} from '@angular/common/http'
 export class ArticulosService {
 
 
-  url='https://scratchya.com.ar/angular/proyecto016/'; // disponer url de su servidor que tiene las páginas PHP
+  url='http://localhost/Api_Angular/'; // disponer url de su servidor que tiene las páginas PHP
 
   constructor(private http: HttpClient) { }
 
@@ -20,7 +20,7 @@ export class ArticulosService {
   }
 
   baja(codigo:number) {
-    return this.http.get(`${this.url}baja.php?codigo=${codigo}`);
+    return this.http.get(`${this.url}baja.php?codigo=` + codigo);
   }
 
   seleccionar(codigo:number) {
